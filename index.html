@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Student Management System
+    </title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <script src="https://kit.fontawesome.com/8fccf6aaad.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        *{
+
+            background: #1E1E1E;
+        }
+        .list{
+
+            border-collapse: collapse;
+            border-radius: 5px solid #dddddd;;
+        }
+        
+body > table{
+    width: 100%;
+    background: #1E1E1E;
+}
+
+table{
+    border-collapse: collapse;
+    border-style: hidden;
+    background: #1E1E1E;
+}
+table.list{
+    width:100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: #ddd;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+
+input[type=text], input[type=number] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 20px 25px;
+    margin-left: 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background: #1E1E1E;
+    color: aliceblue;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 30%;
+    background-color: #ddd;
+    color: #1E1E1E;
+    padding: 14px 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#myInput{
+
+width: 100%;
+margin-bottom: 30px;
+
+
+}
+
+form div.form-action-buttons{
+    text-align: left;
+}
+.list{
+
+    border-style: solid;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+
+    color: #0000ee;
+    color: green;
+    margin-right: 15px;
+}
+.delete{
+    color: red;
+    
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}
+
+    </style>
+</head>
+
+<body>
+    <h2 style="color: white;">Student Management CRUD</h2>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    
+                        <!-- <label></label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName" placeholder="ID"> -->
+                    
+                    
+                        <label></label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="empCode" id="empCode" placeholder="name">
+                    
+                        <label></label>
+                        <input type="text" name="salary" id="salary" placeholder="Email">
+                    
+                    
+                        <label></label>
+                        <input type="text" name="city" id="city" placeholder="Age">
+
+                        <label></label>
+                        <input type="text" name="grade" id="grade" placeholder="GPA">
+
+                        <label></label>
+                        <input type="text" name="degree" id="degree" placeholder="Degree">
+                    
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Add Student">
+                    </div>
+
+
+                </form>
+            </td>
+            
+        </tr>
+    </table>
+
+
+    <div>
+        <input type="text" id="myInput" onkeyup='myFunction()' placeholder="Search by Name, Email or Degree">
+    </div>
+    
+        <table class="list" id="employeeList">
+            
+                <tr class="header">
+                    <!-- <th>ID</th> -->
+                    <th class="search-input">Name</th>
+                    <th class="search-input">Email</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th class="search-input">Degree</th>
+                    <th style="border-left: #1E1E1E;"></th>
+                </tr>
+            
+            <tbody>
+
+            </tbody>
+        </table>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
